@@ -1,0 +1,52 @@
+.container-personal {
+    position: relative;
+    display: flex;
+    gap: 0.8rem;
+
+    .item {
+        &.user-info {
+            width: 30%;
+            flex: 0.4;
+            position: fixed;
+
+            .info {
+                position: relative;
+                padding: 1.2rem;
+                border-radius: 0.8rem;
+
+                .setting-icon {
+                    width: 2rem;
+                    top: -1rem;
+                    right: -0.8rem;
+                    position: absolute;
+                    cursor: pointer;
+
+                    &:hover {
+                        path {
+                            stroke: var(--color-main);
+                        }
+                    }
+                }
+            }
+
+            .avatar {
+                display: block;
+                margin: auto;
+            }
+
+            hr {
+                margin: 1.2rem 0;
+                border-color: var(--grey);
+            }
+        }
+
+        &.list-post {
+            margin-left: auto;
+            width: 55%;
+
+            .post-of-user {
+                margin-top: 0.6rem;
+            }
+        }
+    }
+}

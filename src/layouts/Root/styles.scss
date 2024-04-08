@@ -1,0 +1,11 @@
+.container-root-layout {
+    min-height: 100vh;
+    height: fit-content;
+
+    .container-page {
+        max-width: 80%;
+        margin: auto;
+        margin-top: 9rem;
+        padding: 1.2rem;
+    }
+}

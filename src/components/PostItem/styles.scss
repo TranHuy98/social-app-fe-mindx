@@ -1,0 +1,96 @@
+.post-item {
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.2rem;
+
+    .author-post {
+        display: flex;
+        gap: 0.5rem;
+
+        .author-time {
+            display: flex;
+            flex-direction: column;
+
+            .author {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: var(--deep-blue);
+            }
+        }
+    }
+
+    .content-post {
+        .view-more {
+            cursor: pointer;
+            text-decoration: underline;
+            color: var(--color-main);
+        }
+
+        .images {
+            .image-item {
+                display: block;
+                max-width: 100%;
+                margin: auto;
+                margin-top: 0.7rem;
+            }
+        }
+    }
+
+    .interact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--black-1);
+        border-bottom: 1px solid var(--grey);
+
+        .item-interact {
+            display: flex;
+            width: fit-content;
+            align-items: center;
+
+            .heart-icon {
+                width: 2rem;
+                cursor: pointer;
+
+                &:hover,
+                &.active {
+                    * {
+                        fill: var(--heart-red);
+                        stroke: var(--heart-red);
+                    }
+                }
+            }
+
+            .message-icon {
+                width: 2rem;
+
+                path {
+                    fill: var(--light-blue);
+                    stroke: var(--white-1);
+                }
+            }
+
+        }
+
+        .write-comment {
+            flex: 1;
+            padding: 0.3rem 0;
+
+            .type-comment {
+                border: none;
+                border-radius: 0.8rem;
+                background-color: var(--grey);
+            }
+        }
+    }
+
+    .list-comment {
+        padding-top: 0.3rem;
+    }
+
+    .view-more {
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

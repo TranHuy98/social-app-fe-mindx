@@ -1,0 +1,20 @@
+.comment-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    .author-comment {
+        background-color: var(--grey);
+        flex: 1;
+        padding: 0.2rem;
+
+        .author {
+            color: var(--deep-blue);
+            font-weight: bold;
+        }
+
+        p {
+            color: var(--black-1);
+        }
+    }
+}

@@ -1,0 +1,68 @@
+// mobile (XS)
+@media screen and (max-width:576px) {
+    .page-header {
+
+        .list-router-page a,
+        button span {
+            font-size: 1rem;
+        }
+
+        .list-router-page {
+            gap: unset;
+            justify-content: space-evenly;
+
+            .icon-header {
+                display: block !important;
+            }
+
+            span.title {
+                display: none;
+            }
+        }
+    }
+
+    .container-page {
+        .container-home {
+            width: 100%;
+        }
+
+        .container-personal {
+            flex-direction: column;
+
+            .user-info {
+                width: 100%;
+                position: static;
+            }
+
+            .list-post {
+                width: 100%;
+                margin: 0;
+            }
+
+        }
+    }
+}
+
+// tablet (SM)
+@media screen and (max-width:767px) {
+    .container-page {
+        .container-home {
+            width: 100%;
+        }
+
+        .container-personal {
+            flex-direction: column;
+
+            .user-info {
+                width: 100%;
+                position: static;
+            }
+
+            .list-post {
+                width: 100%;
+                margin: 0;
+            }
+
+        }
+    }
+}

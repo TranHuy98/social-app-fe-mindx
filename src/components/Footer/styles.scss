@@ -1,0 +1,19 @@
+.page-footer {
+    padding: 2.4rem;
+    background-color: var(--white-1);
+    color: var(--black);
+    text-align: center;
+
+    h1 {
+        margin-bottom: 1.2rem;
+    }
+
+    .content {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .copy-right {
+        margin-top: 1.2rem;
+    }
+}

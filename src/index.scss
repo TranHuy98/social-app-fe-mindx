@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --color-main: #E21E26;
+    --light-red: #dd383d;
+    --heart-red: #F81B1C;
+    --black: #000000;
+    --white: #EBECE0;
+    --white-1: #ffffff;
+    --black-1: #282C2E;
+    --blue: #2560b3;
+    --light-blue: #2E80EC;
+    --deep-blue: #1C2554;
+    --grey: #F7F7F7;
+    --bg-white: #F3F6F8;
+}
+
+html {
+    background-color: var(--bg-white);
+}
+
+.bg-white {
+    background-color: var(--white-1);
+}
