@@ -8,6 +8,8 @@ import CommentItem from '../CommentItem';
 import './styles.scss';
 
 
+const templateContent = "123456789asdakfchnadkjkvjsdflwqwwwwdaxffb welijerf dlv erl wfj qrfso giwe erf  ebv wlek fbe ikqwie qwrpripotu poiuweiop wi po w epodfi gjf ";
+
 const PostItem = (props) => {
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
@@ -16,8 +18,6 @@ const PostItem = (props) => {
     const handleViewMore = (view) => {
         setViewMore(view)
     };
-
-    const templateContent = "123456789asdakfchnadkjkvjsdflwqwwwwdaxffb welijerf dlv erl wfj qrfso giwe erf  ebv wlek fbe ikqwie qwrpripotu poiuweiop wi po w epodfi gjf ";
 
     return (
         <div className={`post-item bg-white ${props.className}`}>
