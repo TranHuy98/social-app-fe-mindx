@@ -35,6 +35,8 @@ const PostItem = (props) => {
         };
     
         fetchData();
+        console.log(response.data);
+        console.log(noidung);
       }, []);
 
     return (
