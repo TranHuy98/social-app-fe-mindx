@@ -10,7 +10,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 
-const templateContent = "123456789asdakfchnadkjkvjsdflwqwwwwdaxffb welijerf dlv erl wfj qrfso giwe erf  ebv wlek fbe ikqwie qwrpripotu poiuweiop wi po w epodfi gjf ";
+const templateContent = "12345678 ";
 
 const PostItem = (props) => {
     const checkingContentLength = templateContent.length > 200;
