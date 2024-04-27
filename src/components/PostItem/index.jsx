@@ -7,7 +7,7 @@ import MessageIcon from '../MessageIcon';
 import CommentItem from '../CommentItem';
 import './styles.scss';
 
-const templateContent = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ut rerum facilis corporis voluptas? Cumque soluta dolorum exercitationem quam corporis distinctio cum! Explicabo quod quibusdam accusamus, enim dolore voluptates architecto!";
+
 const PostItem = (props) => {
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
@@ -15,7 +15,10 @@ const PostItem = (props) => {
 
     const handleViewMore = (view) => {
         setViewMore(view)
-    }
+    };
+
+    const templateContent = "123456789asdakfchnadkjkvjsdflwqwwwwdaxffb welijerf dlv erl wfj qrfso giwe erf  ebv wlek fbe ikqwie qwrpripotu poiuweiop wi po w epodfi gjf ";
+
     return (
         <div className={`post-item bg-white ${props.className}`}>
             <div className={"author-post"}>
