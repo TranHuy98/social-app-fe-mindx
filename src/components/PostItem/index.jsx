@@ -6,6 +6,7 @@ import mindx from '/mindxLogo.jpeg';
 import MessageIcon from '../MessageIcon';
 import CommentItem from '../CommentItem';
 import './styles.scss';
+import axios from 'axios';
 
 
 const templateContent = "123456789asdakfchnadkjkvjsdflwqwwwwdaxffb welijerf dlv erl wfj qrfso giwe erf  ebv wlek fbe ikqwie qwrpripotu poiuweiop wi po w epodfi gjf ";
@@ -23,20 +24,17 @@ const PostItem = (props) => {
     };
 
     useEffect(() => {
-        const fetchPost = async () => {
-            try {
-                const response = await fetch('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1', {
-                    method: GET,
-                });
-                const data = await response.json();
-                setNoiDung(data)
-            } catch (error) {
-                console.error('Failed to fetch users', error);
-            }
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1'); // Đường dẫn endpoint của backend
+            setNoiDung(response.data);
+          } catch (error) {
+            console.error(error);
+          }
         };
-
-        fetchPost();
-    }, []);
+    
+        fetchData();
+      }, []);
 
     return (
         <div className={`post-item bg-white ${props.className}`}>
