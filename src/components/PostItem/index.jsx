@@ -10,7 +10,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 
-const templateContent = "12345678 ";
+const templateContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
 const PostItem = (props) => {
     const checkingContentLength = templateContent.length > 200;
@@ -24,20 +24,20 @@ const PostItem = (props) => {
         setViewMore(view)
     };
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       try {
-    //         const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
-    //         setNoiDung(response.data);
-    //       } catch (error) {
-    //         console.error(error);
-    //       }
-    //     };
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+            setNoiDung(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+        };
     
-    //     fetchData();
-    //     console.log(response.data);
-    //     console.log(noidung);
-    //   }, []);
+        fetchData();
+        console.log(response.data);
+        console.log(noidung);
+      }, []);
 
       
 
