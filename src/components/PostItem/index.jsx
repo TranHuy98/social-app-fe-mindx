@@ -24,20 +24,35 @@ const PostItem = (props) => {
         setViewMore(view)
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
-            setNoiDung(response.data);
-          } catch (error) {
-            console.error(error);
-          }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+    //         setNoiDung(response.data);
+    //       } catch (error) {
+    //         console.error(error);
+    //       }
+    //     };
     
-        fetchData();
-        console.log(response.data);
-        console.log(noidung);
-      }, []);
+    //     fetchData();
+    //     console.log(response.data);
+    //     console.log(noidung);
+    //   }, []);
+
+      //test
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+          setNoiDung(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchData();
+      console.log(response.data);
+      console.log(noidung);
+      //test
 
     return (
         <div className={`post-item bg-white ${props.className}`}>
