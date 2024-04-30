@@ -28,10 +28,10 @@ const PostItem = (props) => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+            const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts');
             setResponse(backendData.data);
             console.log(backendData.data);
-            setNoiDung(backendData.data);
+            // setNoiDung(backendData.data);
             console.log(noiDung);
           } catch (error) {
             console.error(error);
