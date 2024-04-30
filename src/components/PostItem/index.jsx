@@ -29,6 +29,7 @@ const PostItem = (props) => {
         .then(response => {
             // Xử lý dữ liệu trả về ở đây
             console.log(response.data.items); // In ra dữ liệu trả về từ backend
+            console.log('test api success!');
         })
         .catch(error => {
             // Xử lý lỗi ở đây
