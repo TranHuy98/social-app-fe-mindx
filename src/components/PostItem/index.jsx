@@ -19,6 +19,7 @@ const PostItem = (props) => {
 
     // moi them
     const [noidung, setNoiDung] = useState();
+    const [response, setResponse] = useState(null);
 
     const handleViewMore = (view) => {
         setViewMore(view)
@@ -27,8 +28,11 @@ const PostItem = (props) => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+            const backenData = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+            setResponse(backenData);
+            console.log(response);
             setNoiDung(response.data);
+            console.log(data);
           } catch (error) {
             console.error(error);
           }
