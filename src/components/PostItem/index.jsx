@@ -32,7 +32,7 @@ const PostItem = (props) => {
             setResponse(backendData.data.items);
             console.log(response);
             // setNoiDung(backendData.data);
-            console.log(noiDung);
+            // console.log(noiDung);
             console.log('ket noi api thanh cong')
           } catch (error) {
             console.error(error);
