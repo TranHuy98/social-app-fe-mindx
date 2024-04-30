@@ -18,7 +18,7 @@ const Home = () => {
 
                 console.log("data tra ve: " + response.data.data);
                 console.log('test api success!');
-                setPostData(JSON.parse(response.data.data.items));
+                setPostData(response.data.data.items);
                 console.log("postData " + postData);
             })
             .catch(error => {
