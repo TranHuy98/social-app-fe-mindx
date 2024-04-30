@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const Home = () => {
 
-    const [postData, setPostData] = useState();
+    const [postData, setPostData] = useState([]);
 
     useEffect(() => {
         axios.get('https://project-social-app-mindx77.onrender.com/posts')
