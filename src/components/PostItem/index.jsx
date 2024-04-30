@@ -33,6 +33,7 @@ const PostItem = (props) => {
             console.log(response);
             // setNoiDung(backendData.data);
             console.log(noiDung);
+            console.log('ket noi api thanh cong')
           } catch (error) {
             console.error(error);
           }
