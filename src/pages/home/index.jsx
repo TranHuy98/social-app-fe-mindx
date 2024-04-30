@@ -16,10 +16,11 @@ const Home = () => {
         axios.get('https://project-social-app-mindx77.onrender.com/posts')
             .then(response => {
 
-                console.log("data tra ve: " + response.data.data);
+                console.log(response.data.data);
                 console.log('test api success!');
                 setPostData(response.data.data.items);
-                console.log("postData " + postData);
+                console.log("log ra postData")
+                console.log(postData);
             })
             .catch(error => {
                 console.error(error);
