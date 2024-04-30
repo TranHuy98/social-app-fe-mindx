@@ -25,24 +25,15 @@ const PostItem = (props) => {
         setViewMore(view)
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts');
-            setResponse(backendData.data.items);
-            console.log(response);
-            // setNoiDung(backendData.data);
-            // console.log(noiDung);
-            console.log('ket noi api thanh cong')
-          } catch (error) {
+    axios.get('https://project-social-app-mindx77.onrender.com/posts')
+        .then(response => {
+            // Xử lý dữ liệu trả về ở đây
+            console.log(response.data.items); // In ra dữ liệu trả về từ backend
+        })
+        .catch(error => {
+            // Xử lý lỗi ở đây
             console.error(error);
-          }
-        };
-
-        fetchData();
-      }, []);
-
-    
+        });
 
 
     return (
