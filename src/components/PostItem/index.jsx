@@ -25,31 +25,23 @@ const PostItem = (props) => {
         setViewMore(view)
     };
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       try {
-    //         const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts');
-    //         setResponse(backendData.data);
-    //         console.log(backendData.data);
-    //         setNoiDung(backendData.data);
-    //         console.log(noiDung);
-    //       } catch (error) {
-    //         console.error(error);
-    //       }
-    //     };
-
-    //     fetchData();
-    //   }, []);
-
-    axios.get('https://project-social-app-mindx77.onrender.com/posts')
-        .then(response => {
-            // Xử lý dữ liệu trả về ở đây
-            console.log(response.data); // In ra dữ liệu trả về từ backend
-        })
-        .catch(error => {
-            // Xử lý lỗi ở đây
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts');
+            setResponse(backendData.data.items);
+            console.log(response);
+            // setNoiDung(backendData.data);
+            console.log(noiDung);
+          } catch (error) {
             console.error(error);
-        });
+          }
+        };
+
+        fetchData();
+      }, []);
+
+    
 
 
     return (
