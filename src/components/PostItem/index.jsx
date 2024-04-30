@@ -28,19 +28,17 @@ const PostItem = (props) => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const backenData = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
-            setResponse(backenData);
-            console.log(response);
-            setNoiDung(response.data);
-            console.log(data);
+            const backendData = await axios.get('https://project-social-app-mindx77.onrender.com/posts/662644ae7584eca051681af1');
+            setResponse(backendData.data);
+            console.log(backendData.data);
+            setNoiDung(backendData.data);
+            console.log(noiDung);
           } catch (error) {
             console.error(error);
           }
         };
-    
+      
         fetchData();
-        console.log(response.data);
-        console.log(noidung);
       }, []);
 
       
