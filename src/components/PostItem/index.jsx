@@ -17,25 +17,9 @@ const PostItem = (props) => {
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
 
-    // moi them
-    const [noidung, setNoiDung] = useState();
-    const [response, setResponse] = useState(null);
-
     const handleViewMore = (view) => {
         setViewMore(view)
     };
-
-    axios.get('https://project-social-app-mindx77.onrender.com/posts')
-        .then(response => {
-            
-            console.log(response.data.data);
-            console.log('test api success!');
-        })
-        .catch(error => {
-            // Xử lý lỗi ở đây
-            console.error(error);
-        });
-
 
     return (
         <div className={`post-item bg-white ${props.className}`}>
