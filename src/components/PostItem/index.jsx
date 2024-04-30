@@ -28,7 +28,7 @@ const PostItem = (props) => {
     axios.get('https://project-social-app-mindx77.onrender.com/posts')
         .then(response => {
             
-            console.log(response.data);
+            console.log(response.data.data);
             console.log('test api success!');
         })
         .catch(error => {
