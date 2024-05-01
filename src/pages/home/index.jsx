@@ -44,7 +44,7 @@ const Home = () => {
                     console.log(item.postContent);
                     console.log(index);
                     return (
-                        <PostItem  key={index} post={item.postContent}/>
+                        <PostItem post={item.postContent} key={index}/>
 
                         
                     );
