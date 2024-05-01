@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 // const templateContent = "Lorem Ipsum";
 
 const PostItem = (post) => {
-    const templateContent = post;
+    const templateContent = post.post;
     console.log('du lieu post item');
     console.log(templateContent);
     const checkingContentLength = templateContent.length > 200;
@@ -41,7 +41,7 @@ const PostItem = (post) => {
             </div>
             <div className={"content-post"}>
                 <p>
-                    {viewMore ? post : getContent}
+                    {viewMore ? templateContent : getContent}
                     
                     {checkingContentLength &&
                         <span
