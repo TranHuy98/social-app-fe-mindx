@@ -40,7 +40,12 @@ const Home = () => {
                 <CreatePost className="create-post-top" />
             </div>
             <div className="list-post">
-                <PostItem />
+                {postData.map((item, index) => {
+                    return (
+                        <PostItem  key={index} post={item.postContent}/>
+                    );
+                })}
+                
                 <PostItem />
                 <PostItem />
                 <PostItem />
