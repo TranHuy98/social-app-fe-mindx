@@ -16,17 +16,17 @@ const PostItem = (post, key) => {
     const templateContent = post;
     console.log('du lieu post item');
     console.log(templateContent);
-    console.log(typeof(templateContent));
-    console.log(templateContent.post);
-    const checkingContentLength = templateContent.length > 200;
-    const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
+    console.log(typeof (templateContent));
+
+    const checkingContentLength = post.length > 200;
+    const getContent = `${checkingContentLength ? `${post.slice(0, 150)}...` : post}`; { templateContent.slice(0, 150) }...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
 
     const handleViewMore = (view) => {
         setViewMore(view)
     };
 
-    
+
 
     return (
         <div className={`post-item bg-white ${post.className}`}>
@@ -43,8 +43,8 @@ const PostItem = (post, key) => {
             </div>
             <div className={"content-post"} key={key}>
                 <p>
-                    {viewMore ? templateContent.post : getContent}
-                    
+                    {viewMore ? post : getContent}
+
                     {checkingContentLength &&
                         <span
                             className="view-more"
