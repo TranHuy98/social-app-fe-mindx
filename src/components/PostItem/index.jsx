@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 // const templateContent = "Lorem Ipsum";
 
-const PostItem = (key, post) => {
+const PostItem = ({key, post}) => {
     const templateContent = post;
     console.log('du lieu post item');
     console.log(templateContent);
