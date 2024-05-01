@@ -42,7 +42,7 @@ const PostItem = (post, key) => {
             </div>
             <div className={"content-post"} key={key}>
                 <p>
-                    {viewMore ? post : getContent}
+                    {viewMore ? templateContent.post : getContent}
                     
                     {checkingContentLength &&
                         <span
