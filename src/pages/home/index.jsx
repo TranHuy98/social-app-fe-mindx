@@ -41,7 +41,7 @@ const Home = () => {
             </div>
             <div className="list-post">
                 {postData.map((item, index) => {
-                    console.log(item);
+                    console.log(item.postContent);
                     return (
                         <PostItem  key={index} post={item.postContent}/>
 
