@@ -22,7 +22,7 @@ const PostItem = (post) => {
     };
 
     return (
-        <div className={`post-item bg-white ${props.className}`}>
+        <div className={`post-item bg-white ${post.className}`}>
             <div className={"author-post"}>
                 <Avatar src={mindx} size={40} />
                 <div className="author-time">
