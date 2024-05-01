@@ -15,7 +15,7 @@ import { useEffect } from 'react';
 const PostItem = (post, key) => {
     const templateContent = post;
     console.log('du lieu post item');
-    console.log(post);
+    console.log(JSON.stringify(post, null, 2));
     console.log(templateContent);
     console.log(typeof (templateContent));
 
