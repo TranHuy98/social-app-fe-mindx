@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 // const templateContent = "Lorem Ipsum";
 
 const PostItem = (post) => {
+    const templateContent = post;
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
@@ -21,7 +22,7 @@ const PostItem = (post) => {
         setViewMore(view)
     };
 
-    const templateContent = post;
+    
 
     return (
         <div className={`post-item bg-white ${post.className}`}>
