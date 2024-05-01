@@ -12,10 +12,11 @@ import { useEffect } from 'react';
 
 // const templateContent = "Lorem Ipsum";
 
-const PostItem = ({post, key}) => {
+const PostItem = (post, key) => {
     const templateContent = post;
     console.log('du lieu post item');
     console.log(JSON.stringify(post, null, 2));
+    console.log(JSON.parse(post));
     console.log(templateContent);
     console.log(typeof (templateContent));
 
