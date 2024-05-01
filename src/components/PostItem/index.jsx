@@ -36,7 +36,9 @@ const PostItem = (post) => {
             </div>
             <div className={"content-post"}>
                 <p>
-                    {viewMore ? post : getContent} {checkingContentLength &&
+                    {/* {viewMore ? post : getContent} */}
+                    {post}
+                    {checkingContentLength &&
                         <span
                             className="view-more"
                             onClick={() => {
