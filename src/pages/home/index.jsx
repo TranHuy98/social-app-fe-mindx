@@ -12,27 +12,21 @@ const Home = () => {
 
     const [postData, setPostData] = useState([]);
 
-    useEffect(() => {
-        axios.get('https://project-social-app-mindx77.onrender.com/posts')
-            .then(response => {
 
-                console.log(response.data.data);
-                console.log('test api success!');
-                setPostData(response.data.data.items);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+    axios.get('https://project-social-app-mindx77.onrender.com/posts')
+        .then(response => {
 
-        return () => {
+            console.log(response.data.data);
+            console.log('test api success!');
+            setPostData(response.data.data.items);
+        })
+        .catch(error => {
+            console.error(error);
+        });
 
-        };
-    }, []);
+    console.log("log ra postData");
+    console.log(postData);
 
-    useEffect(() => {
-        console.log("log ra postData");
-        console.log(postData);
-    }, [postData]);
 
     return (
         <div className="container-home">
@@ -47,7 +41,7 @@ const Home = () => {
                         <PostItem post={item.postContent} key={index} />
                     );
                 })}
-                
+
                 <PostItem />
                 <PostItem />
                 <PostItem />
