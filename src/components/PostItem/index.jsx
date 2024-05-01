@@ -10,7 +10,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 
-const templateContent = "Lorem Ipsum";
+// const templateContent = "Lorem Ipsum";
 
 const PostItem = (post) => {
     const checkingContentLength = templateContent.length > 200;
@@ -20,6 +20,8 @@ const PostItem = (post) => {
     const handleViewMore = (view) => {
         setViewMore(view)
     };
+
+    const templateContent = post;
 
     return (
         <div className={`post-item bg-white ${post.className}`}>
@@ -36,8 +38,8 @@ const PostItem = (post) => {
             </div>
             <div className={"content-post"}>
                 <p>
-                    {/* {viewMore ? post : getContent} */}
-                    {post}
+                    {viewMore ? post : getContent}
+                    
                     {checkingContentLength &&
                         <span
                             className="view-more"
