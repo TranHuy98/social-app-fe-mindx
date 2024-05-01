@@ -14,6 +14,8 @@ import { useEffect } from 'react';
 
 const PostItem = (post) => {
     const templateContent = post;
+    console.log('du lieu post item');
+    console.log(templateContent);
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
