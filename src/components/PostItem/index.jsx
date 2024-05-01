@@ -17,6 +17,7 @@ const PostItem = (post, key) => {
     console.log('du lieu post item');
     console.log(templateContent);
     console.log(typeof(templateContent));
+    console.log(templateContent.post);
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
