@@ -12,10 +12,11 @@ import { useEffect } from 'react';
 
 // const templateContent = "Lorem Ipsum";
 
-const PostItem = (post) => {
+const PostItem = (key, post) => {
     const templateContent = post;
     console.log('du lieu post item');
     console.log(templateContent);
+    console.log(templateContent.post);
     const checkingContentLength = templateContent.length > 200;
     const getContent = `${checkingContentLength ? `${templateContent.slice(0, 150)}...` : templateContent}`;
     const [viewMore, setViewMore] = useState(false);
@@ -39,7 +40,7 @@ const PostItem = (post) => {
                     </small>
                 </div>
             </div>
-            <div className={"content-post"}>
+            <div className={"content-post"} key={key}>
                 <p>
                     {viewMore ? post.post : getContent}
                     
