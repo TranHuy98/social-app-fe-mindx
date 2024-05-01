@@ -19,8 +19,6 @@ const Home = () => {
                 console.log(response.data.data);
                 console.log('test api success!');
                 setPostData(response.data.data.items);
-                console.log("log ra postData")
-                console.log(postData);
             })
             .catch(error => {
                 console.error(error);
@@ -30,6 +28,11 @@ const Home = () => {
 
         };
     }, []);
+
+    useEffect(() => {
+        console.log("log ra postData");
+        console.log(postData);
+    }, [postData]);
 
     return (
         <div className="container-home">
